@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".insertData">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+            android:background="@drawable/border">
+
+            <TextView
+                android:id="@+id/summatext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Insert Data"
+                android:textColor="@color/rose"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"/>
+
+
+            <EditText
+                android:id="@+id/insertName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border"
+                android:padding="8dp"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawablePadding="8dp"
+                android:layout_marginTop="40dp"
+                android:layout_below="@+id/summatext"
+                android:hint="Name"
+                android:textSize="24sp"/>
+
+            <EditText
+                android:id="@+id/insertAccount"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                android:padding="8dp"
+                android:drawableLeft="@drawable/ic_baseline_account_balance_24"
+                android:drawablePadding="8dp"
+                android:hint="Account Number"
+                android:layout_below="@id/insertName"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/insertEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                android:padding="8dp"
+                android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:drawablePadding="8dp"
+                android:layout_below="@id/insertAccount"
+                android:hint="Mail Id"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/insertBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/insertEmail"
+                android:backgroundTint="@color/rose"
+                android:layout_marginTop="24dp"
+                android:layout_centerHorizontal="true"
+                android:text="Insert"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
