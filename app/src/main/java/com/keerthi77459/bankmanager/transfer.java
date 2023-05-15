@@ -31,33 +31,33 @@ public class transfer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transfer);
 
-//        receiver = findViewById(R.id.receiver);
-
         DB = new DBhelper(this);
         names = new ArrayList<>();
         displayNames();
 
         sharedPreferences1 = getSharedPreferences("TRANSFERDATA", MODE_PRIVATE);
 
-//        adapter = new ArrayAdapter<String>(this,R.layout.text,names);
-//        autoCompleteTextView.setAdapter(adapter);
+        autoCompleteTextView = findViewById(R.id.receiver1);
 
-//        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                String item = parent.getItemAtPosition(position).toString();
-//                SharedPreferences.Editor editor = sharedPreferences1.edit();
-//                editor.putString("item",item);
-//                editor.commit();
-//            }
-//        });
+        adapter = new ArrayAdapter<String>(this,R.layout.text,names);
+        autoCompleteTextView.setAdapter(adapter);
+
+        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String item = parent.getItemAtPosition(position).toString();
+                SharedPreferences.Editor editor = sharedPreferences1.edit();
+                editor.putString("item",item);
+                editor.commit();
+            }
+        });
 
         sender = findViewById(R.id.sender);
         String Sender = sharedPreferences1.getString("sender", null);
         String senderText = Sender + "'s Money Transfer";
         sender.setText(senderText);
 
-        receiver = findViewById(R.id.receiver);
+//        receiver = findViewById(R.id.receiver);
 
         accountNumber = findViewById(R.id.accountNumber);
         String account = sharedPreferences1.getString("account", null);
@@ -72,7 +72,7 @@ public class transfer extends AppCompatActivity {
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String Receiver = receiver.getText().toString();
+                String Receiver = sharedPreferences1.getString("item", null);
                 receiver(Receiver);
                 String receiverBalance = sharedPreferences1.getString("receiverAmount", null);
                 if (Sender != Receiver) {
