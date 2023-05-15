@@ -111,7 +111,9 @@ public class transfer extends AppCompatActivity {
 
     private void startactivitiy() {
         Intent intent = new Intent(transfer.this,customer.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
+
     }
 
     private void displayNames() {

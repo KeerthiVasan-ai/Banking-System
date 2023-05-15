@@ -47,7 +47,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_below="@+id/summatext"
                 android:hint="Name"
-                android:textSize="24sp"/>
+                android:textSize="16sp"/>
 
             <EditText
                 android:id="@+id/insertAccount"
@@ -60,7 +60,7 @@
                 android:drawablePadding="8dp"
                 android:hint="Account Number"
                 android:layout_below="@id/insertName"
-                android:textSize="24sp" />
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/insertEmail"
@@ -73,7 +73,7 @@
                 android:drawablePadding="8dp"
                 android:layout_below="@id/insertAccount"
                 android:hint="Mail Id"
-                android:textSize="24sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/insertBtn"

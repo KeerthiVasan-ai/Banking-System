@@ -26,7 +26,7 @@ public class customer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer);
 
-        insert = findViewById(R.id.insert);
+//        insert = findViewById(R.id.insert);
 
         DB = new DBhelper(this);
 
@@ -42,13 +42,13 @@ public class customer extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         displayData();
 
-        insert.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(customer.this, insertData.class);
-                startActivity(intent);
-            }
-        });
+//        insert.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(customer.this, insertData.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
 
